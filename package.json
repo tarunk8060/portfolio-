@@ -1,0 +1,23 @@
+{
+  "name": "tarunk-portfolio-system",
+  "version": "1.0.0",
+  "description": "Tarun.K Developer Portfolio with FastAPI Backend & CMS Admin Portal",
+  "scripts": {
+    "start:portfolio": "node serve.js",
+    "start:admin": "node admin-portal/serve_admin.js",
+    "start:backend": "powershell -Command \"$env:PYTHONPATH='backend'; & backend/venv/Scripts/python.exe -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload\"",
+    "seed": "powershell -Command \"$env:PYTHONPATH='backend'; & backend/venv/Scripts/python.exe -m app.seed\"",
+    "migrate": "powershell -Command \"$env:PYTHONPATH='backend'; & backend/venv/Scripts/alembic.exe -c backend/alembic.ini upgrade head\"",
+    "test:backend": "powershell -Command \"$env:PYTHONPATH='backend'; $env:PYTHONIOENCODING='utf-8'; & backend/venv/Scripts/python.exe test_routes_direct.py\""
+  },
+  "keywords": [
+    "portfolio",
+    "fastapi",
+    "postgresql",
+    "supabase",
+    "admin-portal",
+    "cms"
+  ],
+  "author": "Tarun K",
+  "license": "MIT"
+}

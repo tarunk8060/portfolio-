@@ -4,3 +4,14 @@ Thumbs.db
 *.log
 .temp-*
 edge-test-profile*
+
+# Python & Virtual Environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+backend/venv/
+backend/.env
+backend/portfolio.db
+backend/uploads/*
+!backend/uploads/.gitkeep

@@ -751,6 +751,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initialize Contact form if on contact page
+    if (typeof window.initExpertiseBehaviors === 'function') { window.initExpertiseBehaviors(); }
+
     if (typeof window.initContactBehaviors === 'function') {
       window.initContactBehaviors();
     }
